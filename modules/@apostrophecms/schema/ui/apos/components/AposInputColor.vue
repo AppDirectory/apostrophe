@@ -4,25 +4,13 @@
     :error="effectiveError" :uid="uid"
   >
     <template #body>
-      <div class="apos-color">
-        <div class="apos-color__ui">
-          <AposContextMenu
-            :button="buttonOptions"
-            @open="open"
-            @close="close"
-            menu-placement="bottom-start"
-            menu-offset="5, 20"
-          >
-            <Picker
-              v-bind="fieldOptions"
-              :value="next"
-              @input="update"
-            />
-          </AposContextMenu>
-        </div>
-        <div class="apos-color__info">
-          {{ valueLabel }}
-        </div>
+      <div class="apos-input-wrapper">
+        <input
+          :class="classes"
+          v-model="next" type="color"
+          :disabled="field.disabled" :required="field.required"
+          :id="uid" :tabindex="tabindex"
+        >
       </div>
     </template>
   </AposInputWrapper>
@@ -30,14 +18,10 @@
 
 <script>
 import AposInputMixin from 'Modules/@apostrophecms/schema/mixins/AposInputMixin';
-import Picker from 'vue-color/src/components/Sketch';
 import tinycolor from 'tinycolor2';
 
 export default {
   name: 'AposInputColor',
-  components: {
-    Picker
-  },
   mixins: [ AposInputMixin ],
   props: {
     // TODO need to work out field-level option overrides
@@ -68,7 +52,7 @@ export default {
       return {
         label: this.field.label,
         type: 'color',
-        color: this.value.data || '',
+        color: this.value.data || ''
       };
     },
     valueLabel() {
@@ -83,6 +67,9 @@ export default {
         'apos-input-wrapper',
         'apos-color'
       ];
+    },
+    tabindex () {
+      return this.field.disableFocus ? '-1' : '0';
     }
   },
   mounted() {

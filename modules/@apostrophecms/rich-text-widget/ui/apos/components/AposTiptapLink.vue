@@ -14,9 +14,9 @@
       should be the same one from the parent, or a fresh one. It does not seem
       to use any of the editor configurations from the parent. - AB
      -->
+    <!-- TODO: Bring back v-click-outside-element for closing. -->
     <div
       v-if="active"
-      v-click-outside-element="close"
       class="apos-link-control__dialog"
       :class="{
         'is-triggered': active,
