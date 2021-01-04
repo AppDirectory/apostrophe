@@ -184,11 +184,11 @@ export default {
 }
 
 .apos-context-menu {
-  & /deep/ .apos-popover__wrapper,
-  & /deep/ div:not([class]),
-  & /deep/ .apos-context-menu__dialog,
-  & /deep/ .apos-popover,
-  & /deep/ .apos-popover__inner {
+  & :deep(.apos-popover__wrapper),
+  & :deep(div:not([class])),
+  & :deep(.apos-context-menu__dialog),
+  & :deep(.apos-popover),
+  & :deep(.apos-popover__inner) {
     &:focus {
       outline: none;
     }

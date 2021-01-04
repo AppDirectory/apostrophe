@@ -414,7 +414,7 @@ export default {
   .apos-tree__row__icon {
     margin-right: 0.25em;
 
-    /deep/ .material-design-icon__svg {
+    :deep(.material-design-icon__svg) {
       transition: fill 0.2s ease;
       fill: var(--a-base-5);
     }
@@ -425,8 +425,8 @@ export default {
     &:active {
       cursor: grabbing;
     }
-    .sortable-chosen & /deep/ .material-design-icon__svg,
-    &:hover /deep/ .material-design-icon__svg {
+    .sortable-chosen & :deep(.material-design-icon__svg),
+    &:hover :deep(.material-design-icon__svg) {
       fill: var(--a-base-2);
     }
   }

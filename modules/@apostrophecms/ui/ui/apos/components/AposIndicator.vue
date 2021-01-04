@@ -44,7 +44,7 @@ export default {
     display: inline-flex;
     max-width: 100%;
     max-height: 100%;
-    /deep/ .material-design-icon__svg {
+    :deep(.material-design-icon__svg) {
       max-width: 100%;
       max-height: 100%;
     }

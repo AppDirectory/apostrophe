@@ -115,7 +115,7 @@ export default {
   justify-content: center;
 }
 
-/deep/ .apos-modal__inner {
+:deep(.apos-modal__inner) {
   top: auto;
   right: auto;
   bottom: auto;
@@ -125,13 +125,13 @@ export default {
   text-align: center;
 }
 
-/deep/ .apos-modal__overlay {
+:deep(.apos-modal__overlay) {
   .apos-modal + .apos-confirm & {
     display: block;
   }
 }
 
-/deep/ .apos-modal__body {
+:deep(.apos-modal__body) {
   padding: 60px;
 }
 

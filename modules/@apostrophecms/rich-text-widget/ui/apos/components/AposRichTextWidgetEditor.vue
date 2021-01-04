@@ -260,15 +260,15 @@ export default {
     border-radius: var(--a-border-radius);
   }
 
-  .apos-rich-text-toolbar /deep/ .is-active {
+  .apos-rich-text-toolbar :deep(.is-active) {
     background-color: var(--a-base-9);
   }
 
-  .apos-rich-text-editor__editor /deep/ .ProseMirror:focus {
+  .apos-rich-text-editor__editor :deep(.ProseMirror:focus) {
     outline: none;
   }
 
-  .apos-rich-text-toolbar__inner /deep/ > * {
+  .apos-rich-text-toolbar__inner > :v-deep(*) {
     height: 35px;
   }
 

@@ -1,5 +1,8 @@
 <template>
-  <div class="apos-button-group" :class="modifierClass" role="menubar">
+  <div
+    class="apos-button-group" :class="modifierClass"
+    role="menubar"
+  >
     <div class="apos-button-group__inner">
       <slot />
     </div>
@@ -49,7 +52,7 @@ export default {
     display: inline-flex;
   }
 
-  .apos-button-group /deep/ .apos-button {
+  .apos-button-group :deep(.apos-button) {
     background-color: var(--a-background-primary);
     border: none;
     &:hover {
@@ -75,18 +78,18 @@ export default {
 
   // group-specific style overrides
 
-  .apos-button-group /deep/ .apos-button {
+  .apos-button-group :deep(.apos-button) {
     border-radius: 0;
   }
 
   // transform weirds this out
-  .apos-button-group /deep/ .apos-button:hover,
-  .apos-button-group /deep/ .apos-button:focus {
+  .apos-button-group :deep(.apos-button:hover),
+  .apos-button-group :deep(.apos-button:focus) {
     transform: none;
   }
 
   // border throws off bounding shell
-  .apos-button-group /deep/ .apos-button:focus {
+  .apos-button-group :deep(.apos-button:focus) {
     border: none;
   }
 
@@ -96,7 +99,7 @@ export default {
       background-color: var(--a-background-inverted);
       color: var(--a-text-inverted);
     }
-    & /deep/ .apos-button {
+    & :deep(.apos-button) {
       border: none;
       background-color: var(--a-background-inverted);
       color: var(--a-text-inverted);

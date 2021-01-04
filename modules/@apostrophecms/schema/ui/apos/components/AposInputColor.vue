@@ -104,7 +104,7 @@ export default {
     display: flex;
     align-items: center;
 
-    & /deep/ .vc-sketch {
+    & :deep(.vc-sketch) {
       padding: 0;
       box-shadow: none;
     }

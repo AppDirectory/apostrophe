@@ -158,7 +158,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .apos-widget-editor /deep/ .apos-modal__inner {
+  .apos-widget-editor :deep(.apos-modal__inner) {
     max-width: 458px;
   }
 </style>

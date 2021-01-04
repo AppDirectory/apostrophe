@@ -208,11 +208,11 @@ export default {
 
 <style lang="scss" scoped>
   .apos-field {
-    .apos-schema /deep/ & {
+    .apos-schema :deep(&) {
       margin-bottom: $spacing-triple;
     }
 
-    .apos-schema /deep/ .apos-toolbar & {
+    .apos-schema :deep(.apos-toolbar &) {
       margin-bottom: 0;
     }
   }

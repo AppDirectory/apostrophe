@@ -239,7 +239,7 @@ export default {
   }
 
   // special schema style for this use
-  .apos-link-control /deep/ .apos-field-target {
+  .apos-link-control :deep(.apos-field-target) {
     .apos-field-label {
       display: none;
     }

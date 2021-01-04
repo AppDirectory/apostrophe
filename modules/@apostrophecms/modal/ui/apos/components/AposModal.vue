@@ -356,7 +356,7 @@ export default {
     justify-content: flex-end;
     flex-grow: 1;
   }
-  .apos-modal__controls--primary /deep/ > .apos-button {
+  .apos-modal__controls--primary > :deep(.apos-button) {
     margin-left: 7.5px;
   }
 
