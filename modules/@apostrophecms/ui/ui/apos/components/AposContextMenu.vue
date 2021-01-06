@@ -1,50 +1,19 @@
 <template>
   <div class="apos-context-menu">
     <slot name="prebutton" />
-    <v-popover
-      @hide="hide"
-      @show="show"
-      :offset="menuOffset"
-      trigger="manual"
-      :placement="menuPlacement"
-      :open="isOpen"
-      :delay="{ show: 0, hide: 0 }"
-      popover-class="apos-popover"
-      popover-wrapper-class="apos-popover__wrapper"
-      popover-inner-class="apos-popover__inner"
-    >
-      <!-- TODO refactor buttons to take a single config obj -->
-      <AposButton
-        class="apos-context-menu__btn"
-        @click="buttonClicked($event)"
-        v-bind="button"
-        :state="buttonState"
-        ref="button"
-      />
-      <template #popover class="apos-popover__slot">
-        <AposContextMenuDialog
-          :menu-placement="menuPlacement"
-          :class-list="classList"
-          :menu="menu"
-          @item-clicked="menuItemClicked"
-        >
-          <slot />
-        </AposContextMenuDialog>
-      </template>
-    </v-popover>
   </div>
 </template>
 
 <script>
-import {
-  VPopover
-} from 'v-tooltip';
+// import {
+//   VPopover
+// } from 'v-tooltip';
 
 export default {
   name: 'AposContextMenu',
-  components: {
-    'v-popover': VPopover
-  },
+  // components: {
+  //   'v-popover': VPopover
+  // },
   props: {
     menu: {
       type: Array,

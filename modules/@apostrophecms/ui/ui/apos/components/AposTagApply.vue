@@ -36,6 +36,8 @@
             />
           </li>
         </ol>
+      </transition>
+      <transition name="fade">
         <div v-if="(!searchTags.length && myTags.length) && !creating" class="apos-apply-tag-menu__empty">
           <p class="apos-apply-tag-menu__empty-message">
             We couldn't find any matching tags. Perhaps

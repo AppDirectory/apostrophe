@@ -1,7 +1,6 @@
 <template>
   <span
     class="apos-indicator"
-    v-tooltip="tooltip"
     :style="`height: ${iconSize}px`"
   >
     <component
@@ -25,11 +24,11 @@ export default {
     iconSize: {
       type: Number,
       default: 15
-    },
-    tooltip: {
-      type: [ String, Object, Boolean ],
-      default: false
     }
+    // tooltip: {
+    //   type: [ String, Object, Boolean ],
+    //   default: false
+    // }
   }
 };
 </script>

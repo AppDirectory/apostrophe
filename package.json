@@ -126,7 +126,6 @@
     "vue-loader": "^16.1.2",
     "vue-material-design-icons": "^4.9.0",
     "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.12",
     "vuedraggable": "^2.24.2",
     "webpack": "^4.44.2",
     "webpack-merge": "^4.2.2",

@@ -9,7 +9,6 @@
     :disabled="isDisabled"
     :type="buttonType"
     :role="role"
-    v-tooltip="tooltip"
     :id="attrs.id ? attrs.id : id"
     v-bind="attrs"
   >
@@ -20,8 +19,8 @@
       v-if="colorStyle"
       class="apos-button__color-preview"
     >
-      <span :style="colorStyle" class="apos-button__color-preview__swatch"></span>
-      <span class="apos-button__color-preview__checkerboard"></span>
+      <span :style="colorStyle" class="apos-button__color-preview__swatch" />
+      <span class="apos-button__color-preview__checkerboard" />
     </span>
     <div class="apos-button__content">
       <AposIndicator
@@ -101,11 +100,11 @@ export default {
     role: {
       type: [ String, Boolean ],
       default: false
-    },
-    tooltip: {
-      type: [ String, Object, Boolean ],
-      default: false
     }
+    // tooltip: {
+    //   type: [ String, Object, Boolean ],
+    //   default: false
+    // }
   },
   emits: [ 'click' ],
   data() {
@@ -124,13 +123,13 @@ export default {
           return {
             backgroundColor: this.color,
             border: `2px solid ${tinycolor(this.color).lighten(20).toString()}`
-          }
+          };
         // if not provide a default placeholder
         } else {
           return {
             backgroundColor: 'transparent',
             border: `2px solid ${tinycolor('white').darken(20).toString()}`
-          }    
+          };
         }
       } else {
         return null;
